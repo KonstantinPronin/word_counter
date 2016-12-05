@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 		return 1;
 
 	bp::child c = start_child(argv[1]);
-	bp::pistream& is = child.get_stdout();
+	bp::pistream& is = c.get_stdout();
 
 	std::string line;
 	std::regex rx("\\S+\\s*");
